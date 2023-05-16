@@ -1,14 +1,24 @@
 puts ("-- Bienvenido al juego --")
 puts ("Piedra - Papel - Tijeras")
-gets
+
 puts ("Ingrese una opcion")
 puts ("1: Piedra")
 puts ("2: Papel")
 puts ("3: Tijeras")
 
-v = gets.to_i
+v = gets.chomp.to_i
 nr = rand(1..3)
+resultado = 0
 
+if v == nr
+  resultado = 1
+if
 
-puts (v)
-puts (nr)
+case resultado
+when 1
+  puts ("Empate")
+when 2
+  puts ("Ganaste")
+when 3
+  puts ("Perdiste")
+end
