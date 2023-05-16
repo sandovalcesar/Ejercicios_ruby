@@ -1,4 +1,4 @@
-puts ("-- Bienvenido al juego --")
+puts ("-- Bieneleccion_usuarioenido al juego --")
 puts ("Piedra - Papel - Tijeras")
 loop = true
 contador_victorias = 0
@@ -7,49 +7,37 @@ contador_empates = 0
 
 while (loop == true )
   puts ("Ingrese una opcion")
-  puts ("1: Piedra")
-  puts ("2: Papel")
-  puts ("3: Tijeras")
+  puts ("0: Piedra")
+  puts ("1: Papel")
+  puts ("2: Tijeras")
   puts(" ")
-  v = gets.chomp.to_i
-  nr = rand(1..3)
+  eleccion_usuario = gets.chomp.to_i
+  n_random = rand(1..3)
   resultado = 0
-  eleccion = " "
-  oponente = " "
+  opcion_usuario= " "
+  computador = " "
 
-  if (v>0 && v<4)
-    if (v == nr)
-      resultado = 1
-    elsif (v == 1 && nr == 2)
-      resultado = 3
-    elsif (v == 1 && nr == 3)
-      resultado = 2
-    elsif (v == 2 && nr == 1)
-      resultado = 2
-    elsif (v == 2 && nr == 3)
-      resultado = 1
-    elsif (v == 3 && nr == 1)
-      resultado = 3
-    elsif (v == 3 && nr == 2)
-      resultado = 2
+  if (eleccion_usuario < 3)
+    if eleccion_usuario == 0 && n_random == 2 then resultado=3 else resultado=2 end
+    if eleccion_usuario == 1 && n_random == 3  then resultado=2  else resultado=3 end
+    if eleccion_usuario == 2 && n_random == 1 then resultado=3  else resultado=2 end
+
+    case eleccion_usuario
+    when 0
+      opcion_usuario= "Piedra"
+    when 1
+      opcion_usuario= "Papel"
+    when 2
+      opcion_usuario= "Tijeras"
     end
 
-    case v
+    case n_random
     when 1
-      eleccion = "Piedra"
+      computador = "Piedra"
     when 2
-      eleccion = "Papel"
+      computador = "Papel"
     when 3
-      eleccion = "tijeras"
-    end
-
-    case nr
-    when 1
-      oponente = "Piedra"
-    when 2
-      oponente = "Papel"
-    when 3
-      oponente = "Tijeras"
+      computador = "Tijeras"
     end
 
     case resultado
@@ -58,22 +46,22 @@ while (loop == true )
       puts("¬_¬")
       puts ("Empate")
       contador_empates=contador_empates+1
-      puts ("Elegiste #{eleccion}")
-      puts("Tu oponente eligio #{oponente}")
+      puts ("Elegiste #{opcion_usuario}")
+      puts("Tu oponente eligio #{computador}")
     when 2
       puts("")
       puts ("^u^")
       puts ("Ganaste")
-      contador_victorias=contador_victorias+1
-      puts ("Elegiste #{eleccion}")
-      puts("Tu oponente eligio #{oponente}")
+      contador_victorias= contador_victorias+1
+      puts ("Elegiste #{opcion_usuario}")
+      puts("Tu oponente eligio #{computador}")
     when 3
       puts(" ")
       puts("u_u")
       puts ("Perdiste")
       contador_perdidas=contador_perdidas+1
-      puts ("Elegiste #{eleccion}")
-      puts("Tu oponente eligio #{oponente}")
+      puts ("Elegiste #{opcion_usuario}")
+      puts("Tu oponente eligio #{computador}")
     end
 else
   puts("A elegido una opcion invalida")
@@ -88,6 +76,7 @@ end
   else
     loop = false
   end
+  puts("")
 end
 puts ("")
 puts ("Juego terminado, el contador quedo de este modo:")
