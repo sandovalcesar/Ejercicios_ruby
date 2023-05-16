@@ -96,3 +96,4 @@ puts("Derrotas: #{contador_perdidas}")
 puts("Empates: #{contador_empates}")
 puts("")
 puts ("| ^u^ | ¬_¬ | u_u |")
+gets
