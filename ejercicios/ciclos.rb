@@ -19,7 +19,12 @@ end
 puts ""
 
 multiplo=0
-for i in 0..9
-  resultado=multiplo*i
-  puts ("#{i} : #{resultado}")
+while multiplo < 10
+  puts""
+  for i in 0..9
+    resultado=multiplo*i
+    puts ("#{multiplo} * #{i} = #{resultado}")
+  end
+  multiplo=multiplo+1
 end
+
