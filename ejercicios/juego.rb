@@ -90,10 +90,9 @@ end
 end
 puts " "
 puts "Juego terminado, el contador quedo de este modo:"
-puts "Victorias: #{contador_victorias}"
-puts "Derrotas: #{contador_perdidas}"
-puts "Empates: #{contador_empates}"
+puts " ^u^ Victorias: #{contador_victorias}"
+puts " u_u Derrotas: #{contador_perdidas}"
+puts " ¬_¬ Empates: #{contador_empates}"
 puts " "
-puts "| ^u^   | u_u  | ¬_¬  |"
-puts "|#{contador_victorias}      |#{contador_perdidas}     |#{contador_empates} "
+puts #{contador_victorias}      |#{contador_perdidas}     |#{contador_empates} "
 gets
