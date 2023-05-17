@@ -56,8 +56,8 @@ end
 
 puts""
 
-x=10
+
 puts "Triangulo"
-x.times do |iterador|
-  puts "#" * (iterador.to_i+1)
+10.times do |iterador|
+  puts "#" * (iterador+1)
 end
