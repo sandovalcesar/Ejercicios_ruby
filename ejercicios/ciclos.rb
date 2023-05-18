@@ -56,7 +56,7 @@ end
 
 puts""
 
-puts 'Ingrese la altura y base del triangulo equilatero (base=altura)'
+puts 'Ingrese la altura del triangulo equilatero'
 vuelta = gets.chomp.to_i
 puts ""
 vuelta.times do |iterador|
