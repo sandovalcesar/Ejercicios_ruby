@@ -1,6 +1,6 @@
-draw = 5
-draw.times do |iterador|
-  (draw - iterador - 1).times { print " " }
+vuelta = 5
+vuelta.times do |iterador|
+  (vuelta - iterador - 1).times { print " " }
   (2 * iterador + 1).times { print "*" }
   puts
 end
