@@ -1,0 +1,51 @@
+  if n_comp > eleccion
+    n_c = 0
+  end
+  if n_comp<eleccion
+    n_c = 1
+  end
+  if n_comp == eleccion
+    n_c = 2
+  end
+    begin
+      case n_c
+          when 0
+            puts 'Mas arriba'
+          when 1
+            puts 'Mas abajo'
+          when 2
+            puts 'FELICITACIONES'
+            puts "Ganaste, el numero que elegiste es #{eleccion} y el numero que pense fue #{n_comp}"
+          end
+    end while n_c != 2
+
+
+def juego
+  n_comp = rand(1..1000)
+  gana = false
+
+  puts 'BIENVENIDO AL JUEGO'
+  puts ''
+
+  print 'Adivina en qué número estoy pensando: '
+  eleccion = gets.chomp.to_i
+
+  while eleccion != n_comp
+    if eleccion > n_comp
+      puts 'Más abajo'
+    else
+      puts 'Más arriba'
+    end
+
+    print 'Intenta nuevamente: '
+    eleccion = gets.chomp.to_i
+  end
+
+  puts '¡FELICITACIONES!'
+  puts "Ganaste, el número que elegiste es #{eleccion} y el número que pensé fue #{n_comp}"
+  gana = true
+
+  return gana
+end
+
+juego()
