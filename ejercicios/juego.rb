@@ -94,5 +94,4 @@ puts " ^u^ Victorias: #{contador_victorias}"
 puts " u_u Derrotas: #{contador_perdidas}"
 puts " ¬_¬ Empates: #{contador_empates}"
 puts " "
-puts #{contador_victorias}      |#{contador_perdidas}     |#{contador_empates} "
 gets
