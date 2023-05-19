@@ -1,19 +1,19 @@
+#aumento de sueldo
 def aumento_de_sueldo(sueldo , porcentaje)
-  if sueldo >0
-    porcentaje_formateado = sprintf('%.2f', porcentaje / 100.0)
-    puts porcentaje_formateado
-    resultado = sueldo + (sueldo * porcentaje)
-    puts "su sueldo #{sueldo}, aumentado en un #{porcentaje}% es: #{resultado}"
+    porcentaje_f = porcentaje / 100.0 #da un resultado 0.algo
+    resultado = sueldo + (sueldo * porcentaje_f)
+    puts "su sueldo #{sueldo}, aumentado en un #{porcentaje}% es: #{resultado}" #imprime porcentaje si el 0.algo
     return resultado
-  end
 end
 
 print "Ingrese el sueldo: $"
 sueldo = gets.chomp.to_f
-print "Ingrese el % a aumentar: "
-porcentaje = gets.chomp.to_f
-aumento_de_sueldo(sueldo, porcentaje)
-
+if sueldo>0
+  print "Ingrese el % a aumentar: "
+  porcentaje = gets.chomp.to_f
+  aumento_de_sueldo(sueldo, porcentaje)
+else puts "error"
+end
 
 
 
