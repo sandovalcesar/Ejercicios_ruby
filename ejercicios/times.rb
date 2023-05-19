@@ -1,9 +1,11 @@
+=begin
 draw = 5
 draw.times do |iterador|
   (draw - iterador - 1).times { print " " }
   (2 * iterador + 1).times { print "*" }
   puts
 end
+
 
 n = ARGV[0].to_i
 n.times do |i|
@@ -13,3 +15,5 @@ n.times do |i|
     print '.'
   end
 end
+=end
+
