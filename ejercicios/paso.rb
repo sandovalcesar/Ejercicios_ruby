@@ -20,40 +20,30 @@ end
 
 #juego de igualdad
 def juego(eleccion)
-  n_comp = rand(0..1000)
+  n_comp = rand(1..100)
   gana = false
-  puts n_comp
-  if n_comp > eleccion
-    puts 'Mas arriba'
-    gana = false
-  end
-  if n_comp < eleccion
-    puts 'mas abajo'
-    gana = false
-  end
-  if n_comp == eleccion
-    puts 'FELICITACIONES'
-    puts "Ganaste, el numero que elegiste es #{eleccion} y el numero que pense fue #{n_comp}"
+
+  if eleccion > n_comp
+    puts 'Más abajo'
+  elsif eleccion < n_comp
+    puts 'Más arriba'
+  else
+    puts '¡FELICITACIONES!'
+    puts "Ganaste, el número que elegiste es #{eleccion} y el número que pensé fue #{n_comp}"
     gana = true
   end
+
   return gana
 end
 
 puts 'BIENVENIDO AL JUEGO'
-puts ""
-print 'advina en que numero estoy pensando: '
+puts ''
+print 'Adivina en qué número estoy pensando: '
 eleccion = gets.chomp.to_i
-victoria = juego(eleccion)
 
-if eleccion > 0
-  while victoria == false
-    juego(eleccion)
-  end
-else
-  puts 'error'
+while juego(eleccion) == false
+  print 'Intenta nuevamente: '
+  eleccion = gets.chomp.to_i
 end
-
-
-
 
 
