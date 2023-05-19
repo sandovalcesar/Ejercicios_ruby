@@ -15,7 +15,5 @@ end
 
 puts "Ingresa una temperatura en grados fahrenheit:"
 fahrenheit = gets.chomp.to_f
-
 grados = fahrenheit_a_celsius(fahrenheit)
-
 puts "#{fahrenheit} grados Celsius son #{grados} grados Fahrenheit."
