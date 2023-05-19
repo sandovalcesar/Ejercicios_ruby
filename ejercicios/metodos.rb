@@ -9,7 +9,7 @@ grados_fahrenheit = gets.chomp.to_f
 grados_celsius = fahrenheit_a_celsius(grados_fahrenheit)
 puts "#{grados_fahrenheit} grados Celsius son #{grados_celsius} grados Fahrenheit."
 
-=end
+
 puts "Ingrese la altura del triangulo"
 altura = gets.chomp.to_i.abs
 
@@ -21,3 +21,4 @@ for i in 1..altura
   puts " " * (altura - i) + valor_caracter
   valor_caracter += caracter * 2
 end
+=end
