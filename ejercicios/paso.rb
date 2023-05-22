@@ -19,8 +19,7 @@ end
 =end
 
 #juego de igualdad
-def juego(eleccion)
-  n_comp = rand(1..100)
+def juego(eleccion, n_comp)
   gana = false
 
   if eleccion > n_comp
@@ -38,12 +37,24 @@ end
 
 puts 'BIENVENIDO AL JUEGO'
 puts ''
-print 'Adivina en qué número estoy pensando: '
-eleccion = gets.chomp.to_i
 
-while juego(eleccion) == false
-  print 'Intenta nuevamente: '
+n_comp = rand(1..10)
+
+loop do
+  print 'Adivina en qué número estoy pensando: '
   eleccion = gets.chomp.to_i
+
+  if juego(eleccion, n_comp)
+    break
+  else
+    puts ""
+    print '¿Quieres intentarlo de nuevo? Ingresa 1 para sí, 2 para no: '
+    respuesta = gets.chomp.to_i
+
+    if respuesta == 2
+      puts "Gracias por jugar"
+    end
+  end
 end
 
 
