@@ -33,11 +33,11 @@ print"Ingresar el nro a contar "
 num = gets.chomp.to_i
 puts contar(numeros,num)
 =end
-
+=begin
 mi_arreglo = [4, 3.5, 6, 5.3, 2, 7]
 suma = 0
 
-=begin #metodo each
+#metodo each
 mi_arreglo.each  do |num|
   suma = num+ suma
 end
@@ -56,9 +56,20 @@ resultado = suma / mi_arreglo.size
 puts resultado
 =end
 
-#metodo for
+=begin #metodo for
 for i in mi_arreglo
   suma = mi_arreglo.sum
 end
 resultado = suma / mi_arreglo.size
 puts resultado
+=end
+
+precios = [100, 200, 1000, 5000, 10000, 10, 5000]
+nuevo_arreglo = []
+precios.each do |num|
+  if num >=1000
+    nuevo_arreglo << num
+  end
+end
+print nuevo_arreglo
+
