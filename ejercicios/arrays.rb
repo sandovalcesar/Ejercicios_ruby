@@ -1,3 +1,4 @@
+=begin
 mi_arreglo = []
 
 puts "Ingrese numero de invitados"
@@ -12,3 +13,17 @@ while i <= invitados
 end
 
 print mi_arreglo
+=end
+
+def contar(lista_numeros) #lista es un arreglo
+  repeticiones = 0
+  lista_numeros.each do |e|
+    if e == 10
+      repeticiones += 1
+    end
+  end
+  repeticiones
+end
+
+numeros = [1, 4, 5, 7, 9, 10, 15, 10, 20, 2, 10, 200, 300, 10, 50]
+puts contar(numeros)
