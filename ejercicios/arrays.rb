@@ -67,7 +67,7 @@ puts resultado
 precios = [100, 200, 1000, 5000, 10000, 10, 5000]
 nuevo_arreglo = []
 precios.each do |num|
-  if num >=1000
+  if num >= 1000
     nuevo_arreglo << num
   end
 end
