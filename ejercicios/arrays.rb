@@ -11,9 +11,10 @@ while i <= invitados
   mi_arreglo << nombres
   i+=1
 end
-
-print mi_arreglo
 =end
+
+=begin
+print mi_arreglo
 
 def contar(lista,num)
   # lista es un arreglo de 1 x n
@@ -31,3 +32,33 @@ numeros = [1, 4, 5, 7, 9, 10, 15, 10, 50, 20, 2, 10, 200, 300, 10, 50]
 print"Ingresar el nro a contar "
 num = gets.chomp.to_i
 puts contar(numeros,num)
+=end
+
+mi_arreglo = [4, 3.5, 6, 5.3, 2, 7]
+suma = 0
+
+=begin #metodo each
+mi_arreglo.each  do |num|
+  suma = num+ suma
+end
+=end
+
+=begin #metodo while
+i=1
+u=0
+while i <= mi_arreglo.size
+  suma = suma + mi_arreglo[u]
+  i+=1
+  u+=1
+end
+
+resultado = suma / mi_arreglo.size
+puts resultado
+=end
+
+#metodo for
+for i in mi_arreglo
+  suma = mi_arreglo.sum
+end
+resultado = suma / mi_arreglo.size
+puts resultado
