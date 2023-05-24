@@ -2,30 +2,30 @@ def calculo_de_pizza (pizza)
   pizza_nueva = pizza
   i = 0
   suma = 0
-  while i <= pizza.size
+  while i <= pizza_nueva.size
     if pizza[i] == 1
-      pizza[i] = 800
+      pizza_nueva[i] = 800
     end
     if pizza[i] == 2
-      pizza[i] = 700
+      pizza_nueva[i] = 700
     end
     if pizza[i] == 3
-      pizza[i] = 2000
+      pizza_nueva[i] = 2000
     end
     if pizza[i] == 4
-      pizza[i] = 300
+      pizza_nueva[i] = 300
     end
     if pizza[i] == 5
-      pizza[i] = 3000
+      pizza_nueva[i] = 3000
     end
     if pizza[i] == 6
-      pizza[i] = 2000
+      pizza_nueva[i] = 2000
     end
     if pizza[i] == 7
-      pizza[i] = 1500
+      pizza_nueva[i] = 1500
     end
     if pizza[i] == 8
-      pizza[i] = 300
+      pizza_nueva[i] = 300
     end
     suma = suma + pizza[i].to_i
     i += 1
@@ -48,6 +48,7 @@ loop do
   when 1
     slct_loop_bo = true
     pizza = []
+    Base = 2200
     while slct_loop_bo == true
       puts "Arma tu pizza"
       puts "-------------"
@@ -61,10 +62,10 @@ loop do
       puts "7: Salame"
       puts "8: Esparragos"
       topin = gets.chomp.to_i
-      # nueva_preparacion(pizza, topin)
+
       pizza << topin
       resultado = calculo_de_pizza(pizza)
-      puts resultado
+      puts resultado + Base
 
       puts "¿Quiere agregar otro ingrediente?"
       puts "1-SI"
