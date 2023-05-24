@@ -46,13 +46,13 @@ end
 =begin #metodo while
 i=1
 u=0
-while i <= mi_arreglo.size
+while i <= mi_arreglo.num
   suma = suma + mi_arreglo[u]
   i+=1
   u+=1
 end
 
-resultado = suma / mi_arreglo.size
+resultado = suma / mi_arreglo.num
 puts resultado
 =end
 
@@ -60,7 +60,7 @@ puts resultado
 for i in mi_arreglo
   suma = mi_arreglo.sum
 end
-resultado = suma / mi_arreglo.size
+resultado = suma / mi_arreglo.num
 puts resultado
 =end
 

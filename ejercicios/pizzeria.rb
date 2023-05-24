@@ -1,27 +1,36 @@
-def calculo_de_pizza (pizza, contador)
-  size = contador
+def calculo_de_pizza (pizza)
   pizza_nueva = pizza
-  pizza_nueva.each do |size|
+  i = 0
+  while i <= pizza_nueva.size
     suma = 0
-    if size == 1
-      suma = 800 + suma
-    elsif size == 2
-      suma = 700 + suma
-    elsif size == 3
-      suma = 2000 + suma
-    elsif size == 4
-      suma = 300 + suma
-    elsif size == 5
-      suma = 3000 + suma
-    elsif size == 6
-      suma = 2000 + suma
-    elsif size == 7
-      suma = 1500 + suma
-    elsif size == 8
-      suma = 300 + suma
+    if pizza[i] == 1
+      pizza[i] = 800
     end
-    puts suma
+    if pizza[i] == 2
+      pizza[i] = 700
+    end
+    if pizza[i] == 3
+      pizza[i] = 2000
+    end
+    if pizza[i] == 4
+      pizza[i] = 300
+    end
+    if pizza[i] == 5
+      pizza[i] = 3000
+    end
+    if pizza[i] == 6
+      pizza[i] = 2000
+    end
+    if pizza[i] == 7
+      pizza[i] = 1500
+    end
+    if pizza[i] == 8
+      pizza[i] = 300
+    end
+    suma = suma + pizza_nueva[i]
+    i += 1
   end
+  puts suma
   return pizza_nueva
 end
 
@@ -55,8 +64,8 @@ loop do
       topin = gets.chomp.to_i
       # nueva_preparacion(pizza, topin)
       pizza << topin
-      contador = pizza.size
-      resultado = calculo_de_pizza(pizza, contador)
+      resultado = calculo_de_pizza(pizza)
+      puts resultado
 
       puts "¿Quiere agregar otro ingrediente?"
       puts "1-SI"
