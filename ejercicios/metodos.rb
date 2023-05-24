@@ -14,11 +14,11 @@ puts "Ingrese la altura del triangulo"
 altura = gets.chomp.to_i.abs
 
 
-valor_caracter = '#'
+ing_caracter = '#'
 caracter = '#'
 
 for i in 1..altura
-  puts " " * (altura - i) + valor_caracter
-  valor_caracter += caracter * 2
+  puts " " * (altura - i) + ing_caracter
+  ing_caracter += caracter * 2
 end
 =end
