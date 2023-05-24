@@ -1,8 +1,8 @@
 def calculo_de_pizza (pizza)
   pizza_nueva = pizza
   i = 0
-  while i <= pizza_nueva.size
-    suma = 0
+  suma = 0
+  while i <= pizza.size
     if pizza[i] == 1
       pizza[i] = 800
     end
@@ -27,11 +27,10 @@ def calculo_de_pizza (pizza)
     if pizza[i] == 8
       pizza[i] = 300
     end
-    suma = suma + pizza_nueva[i]
+    suma = suma + pizza[i].to_i
     i += 1
   end
-  puts suma
-  return pizza_nueva
+  return suma
 end
 
 puts "Bienvenido a la pizzeria"
