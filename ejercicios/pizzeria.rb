@@ -1,7 +1,7 @@
-def nueva (pizza_armar, ingrediente)
-  pizza_armar.push(ingrediente)
-  #print pizza_armar #contenido del arreglo numerico
-  return pizza_armar
+def nueva_pizza (pizza_armada, ingrediente)
+  pizza_armada.push(ingrediente)
+  puts pizza_armada.inspect
+  return pizza_armada
 end
 
 def consulta (pizza_armada)
@@ -11,17 +11,15 @@ end
 puts "Bienvenido a la pizzeria"
 puts "------------------------"
 
-iterador = true
-while iterador == true
+loop do
   puts "Menu: "
-  puts "1- Arma tu nueva pizza"
+  puts "1- Arma tu nueva_pizza pizza"
   puts "2- Consulta tu pizza y su valor"
   puts "3- Realiza cambios en tu pizza"
   puts "4- Finaliza tu pedido"
-  opcion = gets.chomp.to_i
 
+opcion = gets.chomp.to_i
   if opcion > 0 && opcion < 5
-
     case opcion
     when 1
       slct_loop_bo = true
@@ -39,7 +37,7 @@ while iterador == true
         puts "7: Salame"
         puts "8: Esparragos"
         topin = gets.chomp.to_i
-        nueva(pizza, topin)
+        nueva_pizza(pizza, topin)
 
         puts "¿Quiere agregar otro ingrediente?"
         puts "1-SI"
@@ -57,36 +55,21 @@ while iterador == true
           slct_loop_bo = true
         end
       end
+
     when 2
-      puts "Has seleccionado la Opción 2."
-      # Código para la opción 2
+      consultar_pizza = nueva_pizza(mi_pizza_armada)
+      puts consultar_pizza.inspect
+
     when 3
       puts "Has seleccionado la Opción 3"
       # Código para la opción 3
     when 4
       puts "Saliendo del programa..."
-      break # Salir del bucle loop
-    else
-      puts "Opción inválida. Inténtalo nuevamente."
+      break
     end
   else
-    puts "ingrese una opcion valida"
-  end
-
-  puts "¿Quiere volver al menu?"
-  puts "1-SI"
-  puts "2-NO"
-  iterador_numerico = gets.chomp.to_i
-  if iterador_numerico > 0 && iterador_numerico < 3
-    if iterador_numerico == 1
-      iterador = true
-    else
-      iterador = false
-    end
-    puts " "
-  else
-    puts "error"
-    iterador = true
+    puts "Ingre un opcion valida"
   end
 end
+
 
