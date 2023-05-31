@@ -16,10 +16,11 @@ class Libro
   end
 
   def anunciar (medio:)
-    puts "El libro #{@libro} ha sido publicado en #{@medio}"
+    puts "El libro #{@libro} ha sido publicado en #{medio}"
   end
 end
 
 libro_1 = Libro.new('It', 'Stephen King', 322, 'De bolsillo')
 libro_1.publicar
+libro_1.anunciar(medio: "la tecera")
 
