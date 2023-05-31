@@ -5,26 +5,19 @@ def calculo_de_pizza (pizza)
   while i <= pizza_nueva.size
     if pizza[i] == 1
       pizza_nueva[i] = 800
-    end
-    if pizza[i] == 2
+    elsif pizza[i] == 2
       pizza_nueva[i] = 700
-    end
-    if pizza[i] == 3
+    elsif pizza[i] == 3
       pizza_nueva[i] = 2000
-    end
-    if pizza[i] == 4
+    elsif pizza[i] == 4
       pizza_nueva[i] = 300
-    end
-    if pizza[i] == 5
+    elsif pizza[i] == 5
       pizza_nueva[i] = 3000
-    end
-    if pizza[i] == 6
+    elsif pizza[i] == 6
       pizza_nueva[i] = 2000
-    end
-    if pizza[i] == 7
+    elsif pizza[i] == 7
       pizza_nueva[i] = 1500
-    end
-    if pizza[i] == 8
+    elsif pizza[i] == 8
       pizza_nueva[i] = 300
     end
     suma = suma + pizza[i].to_i
@@ -43,14 +36,14 @@ loop do
   puts "3- Finaliza tu pedido"
 
   opcion = gets.chomp.to_i
-  #if opcion > 0 && opcion < 5
+  # if opcion > 0 && opcion < 5
   case opcion
   when 1
     slct_loop_bo = true
     pizza = []
     Base = 2200
     while slct_loop_bo == true
-      puts "Arma tu pizza"
+      puts "Arma tu pizza preciones # para terminar"
       puts "-------------"
       puts "Lista de ingredientes:"
       puts "1: Piña"
@@ -61,27 +54,31 @@ loop do
       puts "6: Chorizillos"
       puts "7: Salame"
       puts "8: Esparragos"
+
       topin = gets.chomp.to_i
 
       pizza << topin
       resultado = calculo_de_pizza(pizza)
       puts resultado + Base
 
-      puts "¿Quiere agregar otro ingrediente?"
-      puts "1-SI"
-      puts "2-NO"
-      selec_loop_num = gets.chomp.to_i
+      # puts "¿Quiere agregar otro ingrediente?"
+      # puts "1-SI"
+      # puts "2-NO"
+       selec_loop_num = gets.chomp.to_i
 
-      if selec_loop_num > 0 && selec_loop_num < 3
-        if selec_loop_num == 1
-          slct_loop_bo = true
-        else
-          slct_loop_bo = false
-        end
-      else
-        puts "error"
-        slct_loop_bo = true
+      if selec_loop_num == "#"
+        slct_loop_bo = false
       end
+      #if selec_loop_num > 0 && selec_loop_num < 3
+      # if selec_loop_num == 1
+      #   slct_loop_bo = true
+      # else
+      #   slct_loop_bo = false
+      # end
+      #else
+      #  puts "error"
+      #  slct_loop_bo = true
+      #end
     end
 
   when 2
