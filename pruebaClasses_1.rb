@@ -14,7 +14,9 @@ end
 
 class Student < Person
   def initialize(first, last, age)
-    super(first, last, age)
+    @first_name = first
+    @last_name = last
+    @age = age
     @type = "Student"
   end
 
@@ -23,13 +25,21 @@ class Student < Person
   end
 
   def introduce
+    puts " "
     puts "Hola profesor. Mi nombre es #{@first_name} #{@last_name}."
+  end
+
+  def self.dialog
+    puts "--dijo el estudiante--"
+    puts " "
   end
 end
 
 class Teacher < Person
   def initialize(first, last, age)
-    super(first, last, age)
+    @first_name = first
+    @last_name = last
+    @age = age
     @type = "Teacher"
   end
 
@@ -40,11 +50,18 @@ class Teacher < Person
   def introduce
     puts "Hola alumnos. Mi nombre es #{@first_name} #{@last_name}."
   end
+
+  def self.dialog
+    puts "--dijo el profesor--"
+    puts " "
+  end
 end
 
 class Parent < Person
   def initialize(first, last, age)
-    super(first, last, age)
+    @first_name = first
+    @last_name = last
+    @age = age
     @type = "Parent"
   end
 
@@ -55,20 +72,28 @@ class Parent < Person
   def introduce
     puts "Hola. Soy uno de los apoderados. Mi nombre es #{@first_name} #{@last_name}."
   end
+
+  def self.dialog
+    puts "--dijo el apoderado--"
+  end
 end
 
 student = Student.new("Victoria", "Cortes", 31)
 teacher = Teacher.new("Cesar", "Sandoval", 41)
 parent = Parent.new("Luis", "Cortes", 65)
 
-student.talk
+
 student.introduce
+student.talk
+print Student.dialog
 
-teacher.talk
 teacher.introduce
+teacher.talk
+print Teacher.dialog
 
-parent.talk
 parent.introduce
+parent.talk
+print Parent.dialog
 
 puts " "
 puts "Ancestros de Student:"
