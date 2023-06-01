@@ -13,13 +13,6 @@ class Person
 end
 
 class Student < Person
-  def initialize(first, last, age)
-    @first_name = first
-    @last_name = last
-    @age = age
-    @type = "Student"
-  end
-
   def talk
     puts "Aquí es la clase de programación con Ruby?"
   end
@@ -36,13 +29,6 @@ class Student < Person
 end
 
 class Teacher < Person
-  def initialize(first, last, age)
-    @first_name = first
-    @last_name = last
-    @age = age
-    @type = "Teacher"
-  end
-
   def talk
     puts "Bienvenidos a la clase de programación con Ruby!"
   end
@@ -58,13 +44,6 @@ class Teacher < Person
 end
 
 class Parent < Person
-  def initialize(first, last, age)
-    @first_name = first
-    @last_name = last
-    @age = age
-    @type = "Parent"
-  end
-
   def talk
     puts "Aquí es la reunión de apoderados?"
   end
