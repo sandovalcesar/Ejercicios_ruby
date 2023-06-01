@@ -83,3 +83,4 @@ print Teacher.ancestors.take(2)
 puts " "
 puts "Ancestros de Parent:"
 print Parent.ancestors.take(2)
+gets()
